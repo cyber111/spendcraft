@@ -46,3 +46,28 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# ---------------------------------------------------------------------------
+# Secrets — this repo is PUBLIC. Never commit signing keys or credentials.
+# (android/.gitignore covers android/ too; these catch them anywhere.)
+# ---------------------------------------------------------------------------
+# Release signing: keystores + the file holding their passwords
+*.jks
+*.keystore
+*.p12
+*.pem
+key.properties
+**/key.properties
+!**/key.properties.example
+
+# Environment files / service credentials
+.env
+.env.*
+!.env.example
+google-services.json
+GoogleService-Info.plist
+**/service-account*.json
+
+# Play Console / release outputs (signed binaries don't belong in git)
+*.aab
+*.apk
