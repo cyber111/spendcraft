@@ -1,0 +1,50 @@
+name: spendcraft
+description: "SpendCraft — offline-first expense tracker with optional sync."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.5
+  supabase_flutter: ^2.8.0
+  google_fonts: ^6.2.1
+  fl_chart: ^0.69.2
+  flutter_animate: ^4.5.0
+  intl: ^0.19.0
+  uuid: ^4.5.1
+  share_plus: ^10.1.2
+  csv: ^6.0.0
+  connectivity_plus: ^6.1.0
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.13
+  flutter_launcher_icons: ^0.14.2
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#0D9488"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+    # Bundled so the app renders correctly with no network (OFL-licensed).
+    - assets/google_fonts/

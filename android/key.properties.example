@@ -1,0 +1,15 @@
+# Copy to android/key.properties (git-ignored) and fill in.
+#
+# 1) Create the upload keystore ONCE, outside the repo, and back it up
+#    (password manager + a second copy). Losing it means you can't ship
+#    updates without a Play support reset.
+#
+#    keytool -genkeypair -v -keystore ~/keys/spendcraft-upload.jks \
+#      -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#
+# 2) Point storeFile at it (absolute path is simplest).
+
+storePassword=<keystore password>
+keyPassword=<key password — same as storePassword unless you chose otherwise>
+keyAlias=upload
+storeFile=/Users/pratikjain/keys/spendcraft-upload.jks
